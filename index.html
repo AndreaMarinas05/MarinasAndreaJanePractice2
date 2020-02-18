@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+        <form id="LoginForm">
+            <br><br> 
+            <label>Login<input type="text" id="login" required></label><br><br>
+            <label>Password<input type="password" id="inPass" required></label><br><br>
+            <label>Confirm Password<input type="password" id="conPass" required></label><br><br>
+            <label>Gender
+                <select id="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="other">other</option>
+                </select>
+            </label><br><br>
+            <label>Email<input type="email" id="email" required></label><br><br>
+            <input type="submit" value="Register" id="register" onclick="comparePassword()"></button>
+            <p id="valPassword">Passwords are not the same</p>
+            <p id="valEmail">Mail is wrong</p>
+        </form>
+</body>
+</html>
