@@ -10,8 +10,10 @@
 <body>
         <form id="LoginForm">
             <br><br> 
-            <label>Login<input type="text" id="login" required></label><br><br>
-            <label>Password<input type="password" id="inPass" required></label><br><br>
+            <label>Login<input type="text" id="login" required pattern="\S+.*"></label><br><br>
+            <label>Password
+                <input type="password" id="inPass" required>
+            </label><p id="passwordStrength"></p><br><br>
             <label>Confirm Password<input type="password" id="conPass" required></label><br><br>
             <label>Gender
                 <select id="gender">
@@ -21,7 +23,7 @@
                 </select>
             </label><br><br>
             <label>Email<input type="email" id="email" required></label><br><br>
-            <input type="submit" value="Register" id="register" onclick="comparePassword()"></button>
+            <button id="register">Register</button>
             <p id="valPassword">Passwords are not the same</p>
             <p id="valEmail">Mail is wrong</p>
         </form>
